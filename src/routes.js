@@ -7,6 +7,10 @@ const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
 
+routes.get('/', (req,res) =>{
+    return res.send(`Be the Hero Api, Hello Folks`)
+});
+
 routes.post('/sessions', SessionController.create);
 
 routes.get('/ongs', OngController.index);
